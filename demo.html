@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title></title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+  background: #fff;
+  overflow: hidden;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background: #262626;
+  width: 250px;
+  height: 100%;
+  transition: .3s;
+}
+.active {
+  left: 0;
+}
+ul {
+  margin: 0;
+  paddin: 20px 0;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  padding: 10px 20px;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+.sidebarBtn {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+}
+.sidebarBtn span {
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: #262626;
+  position: absolute;
+  top: 24px;
+  transition: .3s;
+}
+.sidebarBtn span:before {
+  content:"";
+  width: 100%;
+  height: 3px;
+  background: #262626;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  transition: .3s;
+}
+.sidebarBtn span:after {
+  content:"";
+  width: 100%;
+  height: 3px;
+  background: #262626;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: .3s;
+}
+.sidebarBtn.toggle span {
+  background: transparent;
+}
+.sidebarBtn.toggle span:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.sidebarBtn.toggle span:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  </style>
+</head>
+<body>
+<div class="sidebar">
+  <ul>
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Serviços</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+  <button class="sidebarBtn">
+    <span></span>
+  </button>
+</div>
+<div class="n">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+  $(".sidebarBtn").click(function(){
+    $('.sidebar').toggleClass("active");
+    $('.sidebarBtn').toggleClass('toggle')
+  })
+})
+    </script>
+</body>
+</html>
